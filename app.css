@@ -1,0 +1,29 @@
+body{
+    display: flex;
+    font-family: Georgia, Times, serif;
+    background-color: rgb(91, 91, 91);
+    align-content: center;
+    justify-content: center;
+}
+
+#vert-card{
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 500px;
+}
+
+#skill-ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    margin-right: 100px;
+}
+
+#skill-ul li{
+    margin: 25px;
+    background-color: rgb(77, 77, 77);
+    padding: 10px;
+    border-radius: 10px;
+    color: whitesmoke;
+}
