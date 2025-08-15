@@ -1,13 +1,40 @@
-const dev = {
-    userID: 2,
-    userName: "byteMaster",
-    yearsXP: 8,
-    isActive: true,
-    pictureURL: "https: //api.dicebear.com/9.x/adventurer/svg?seed=Mackenzie",
-    email: "master@example.com",
-    phone: "667-372-5555",
-    skills: ["Python", "Django", "SQL"],
-    bio: "With 8 years in the field, byteMaster is a Python and Django expert, skilled in creating robust back-end systems and managing complex databases with SQL."
+
+class DevCardManager{
+    constructor(){
+        this.dev = {
+    userID: null,
+    userName: "",
+    yearsXP: null,
+    isActive: false,
+    pictureURL: "",
+    email: "",
+    phone: "",
+    skills: [],
+    bio: ""
+        };
+    }
+
+    initializeAndReadJSON(fileName){
+        const xlsx = require('xlsx');
+        const fs = require('fs');
+
+        const file = xlsx.readFile(fileName);
+        const sheetName = file.SheetNames[0];
+        const sheet = file.Sheets[sheetName];
+
+        const jsonData = xlsx.utils.sheet_to_json(sheet);
+        fs.writeFileSync('devData.json', JSON.stringify(data, null, 4));
+
+        return jsonData;
+
+    }
+    
+    getAllDevs(json){
+        const devs = [];
+        json.forEach(element => {
+            
+        });
+    }
 }
 
 doc = document.getElementsByTagName("body")[0];
